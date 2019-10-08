@@ -24,6 +24,8 @@ gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.5'
 
+gem "font-awesome-rails"
+
 group :doc do
 gem 'sdoc', require: false
 
