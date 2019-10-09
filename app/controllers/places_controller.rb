@@ -20,6 +20,10 @@ def create
  end 
 
 
+def edit
+	@place = Place.find(params[:id])
+end
+
  private
 
 
