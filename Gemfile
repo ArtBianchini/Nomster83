@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "font-awesome-rails"
 
+gem 'devise'
 group :doc do
 gem 'sdoc', require: false
 
