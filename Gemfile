@@ -28,7 +28,11 @@ gem "font-awesome-rails"
 
 gem 'devise'
 
+gem "geocoder"
+
 gem 'simple_form'
+
+gem "figaro"
 
 group :doc do
 gem 'sdoc', require: false
