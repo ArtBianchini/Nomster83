@@ -59,8 +59,8 @@ def update
     render :edit, status: :unprocessable_entity
   end
 end
- private
 
+ private
 
  def place_params
  	params.require(:place).permit(:name, :description, :address)
