@@ -14,7 +14,7 @@
       padding: 0;
     }
     #map {
-    	height: 100%;
+    	height: 60%;
     }
    </style>
    </head>
@@ -78,7 +78,11 @@ data-target="#myModal">
       <%= f.input :rating, as: :select, collection: Comment::Ratings %>
       <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
       <% end %>
-
+      <%= simple_form_for @comment, url: '#' do |f| %>
+      <%= f.input :message %>
+     <%= f.input :rating %>
+     <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+<% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -34,6 +34,8 @@ gem 'simple_form'
 
 gem "figaro"
 
+gem 'carrierwave', '~> 2.0.2'
+
 group :doc do
 gem 'sdoc', require: false
 
