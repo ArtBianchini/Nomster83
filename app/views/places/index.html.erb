@@ -12,11 +12,12 @@
 
     <div class="col-12">
   <blockquote>
-    <% if place.comments.last.humanized_rating.present? %>
-      <b><%= place.comments.last.humanized_rating %></b> -
-    <% end %>
+    <% if place.comments.present? %>
+      <b><%= place.comments.last.humanized_ratings %></b> -
     <%= place.comments.last.message %>
-    <small><%= place.comments.last.user.email %></small>
+    <small><%= place.comments.last.user.email %></small> 
+    <% end %>
   </blockquote>
     </div>
+  </div>
   <% end %> 
