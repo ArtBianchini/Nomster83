@@ -1,3 +1,3 @@
 class Photo < ApplicationRecord: :Base
-	mount_uploader <%= f.input:picture %> , PictureUploader;
+	mount_uploader :picture, PictureUploader
 end

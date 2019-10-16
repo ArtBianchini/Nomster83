@@ -42,6 +42,10 @@ body{
 	clear: both;
 }
 
+#map {
+      height: 300px; 
+    }
+    
 blockquote {
 	background: #f9f9f9;
 	border-left: 10px solid #ccc;
@@ -61,9 +65,7 @@ blockquote:before {
 
 }
 
- #map {
-      height: 300px; 
-    }
+ 
 blockquote p {
 	display: inline;
 }

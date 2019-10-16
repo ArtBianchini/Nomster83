@@ -13,6 +13,6 @@ class Comment < ApplicationRecord
 
 
 	def humanized_ratings
-		Ratings.invert[self.rating]
+		RATINGS.invert[self.rating]
   end
 end
