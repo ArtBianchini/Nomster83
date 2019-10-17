@@ -110,15 +110,15 @@
    <% @place.comments.each do |comment| %>
    <div class="col-12 col-sm-6">
     <blockquote>
-      <b><%= if comment.humanized_rating.present? %></b> -
-      <b><%= comment.humanized_rating %></b> -
+     <% if comment.humanized_rating.present? %> -
+      <%= place.comments.humanized_rating %> -
     <% end %>
-      <%= comment.message %>
-      <small><%= comment.user.email %></small> 
+      <%= place.comments.last.message %>
+      <small><%= place.comments.last.user.email %></small> 
     </blockquote>
-</div> 
-<% end %> 
-</div>
+    <% end %> 
+  </div> 
+  <% end %> 
 
 
 

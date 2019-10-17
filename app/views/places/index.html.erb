@@ -12,8 +12,8 @@
     <% if place.comments.present? %>
     <<div class="col-12">
     <blockquote>
-      <b><%= if comment.humanized_rating.present? %></b> -
-      <b><%= place.comments.humanized_rating %></b> -
+      <% if comment.humanized_rating.present? %> -
+      <%= place.comments.humanized_rating %> -
     <% end %>
       <%= place.comments.last.message %>
       <small><%= place.comments.last.user.email %></small> 
