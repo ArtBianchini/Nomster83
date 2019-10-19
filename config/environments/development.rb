@@ -10,17 +10,17 @@ Rails.application.configure do
    # enable_starttls_auto: true,
    # user_name: ENV['GMAIL_ADDRESS'],
    # password: ENV['GMAIL_PASSWORD']
-  }
+  #} 
 
 
-  config.action_mailer.default_url_options = {host: 'nomster-arthur-bianchini.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'localhost:3030' } 
 
     config.cache_store = :null_store
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
   config.eager_load = false
-  # Don't care if the mailer can't send.
+  # Do not care if the mailer cannot send.
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
@@ -33,6 +33,8 @@ Rails.application.configure do
 
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
+
+  config.action_mailer.delivery_method = :test
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
@@ -48,4 +50,5 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+end
 end
