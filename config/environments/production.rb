@@ -12,7 +12,7 @@ Rails.application.configure do
   }
 
 
-  config.action_mailer.default_url_options = { host: 'nomster-arthur-bianchini.herokuapp.com'}
+  config.action_mailer.default_url_options = host: 'localhost 3030'
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and

@@ -36,6 +36,8 @@ gem "figaro"
 
 gem 'carrierwave', '~> 2.0.2'
 
+gem 'fog-aws'
+
 group :doc do
 gem 'sdoc', require: false
 
