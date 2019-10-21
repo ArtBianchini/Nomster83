@@ -1,11 +1,10 @@
 @font-face {
     font-family: 'cantarellboldoblique';
-    src: url('Cantarell-BoldOblique-webfont.eot');
-    src: url('Cantarell-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Cantarell-BoldOblique-webfont.woff2') format('woff2'),
-         url('Cantarell-BoldOblique-webfont.woff') format('woff'),
-         url('Cantarell-BoldOblique-webfont.ttf') format('truetype'),
-         url('Cantarell-BoldOblique-webfont.svg#cantarellboldoblique') format('svg');
+    src: url('/assets/fonts/Cantarell-BoldOblique-webfont.eot');
+    src: url('/assets/fonts/Cantarell-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Cantarell-BoldOblique-webfont.woff2') format('woff2'),
+         url('/assets/fonts/Cantarell-BoldOblique-webfont.woff') format('woff'),
+         url('/assets/fonts/Cantarell-BoldOblique-webfont.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 

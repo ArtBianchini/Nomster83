@@ -24,41 +24,32 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
 <% @places.each do |place| %>
   <div class= "booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1></br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
-
-
-   <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-      <% end %>
-
-    <% if place.comments.present? %>
-    <% end %> 
-    <div class="col-12">
-    <blockquote>
-      <% if comment.humanized_rating.present? %> -
-      <%= place.comments.humanized_rating %> -
+    <% if place.user.present? %>
+    <small><%= place.user.email %></small>
     <% end %>
-      <%= place.comments.last.message %>
-      <small><%= place.comments.last.user.email %></small> 
-    </blockquote>
-  </div>
+    <% if place.comments.present? %>
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+        <%= place.comments.humanized_rating %>
+        <% end %>
+        <%= place.comments.last.message %>
+        <small><%= place.comments.last.user.email %></small>
+      </blockquote>  
     <% end %> 
-  <% if place.photos.present? %>
+  </div>
+  <% place.photos.each do |photo| %>
+    <div class="col-12">
+      <blockquote>
+        <% if photo.picture.to_s.present? %>
+        <%= image_tag photo.picture.to_s %>
+        <% end %>
+        <small><%= photo.caption %></small>
+      </blockquote>
+    </div>
   <% end %>
-  <div class="col-12">
-    <blockquote>
-      <%= place.pictures.last.message %>
-      <small><%= place.pictures.last.user.email %></small>
-    </blockquote>
-  </div>
-    <% end %> 
-  
-  
-   
-
+  <% end %>
