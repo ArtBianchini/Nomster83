@@ -2,7 +2,6 @@
     font-family: 'cantarellboldoblique';
     src: url('/assets/fonts/Cantarell-BoldOblique-webfont.eot');
     src: url('/assets/fonts/Cantarell-BoldOblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/Cantarell-BoldOblique-webfont.woff2') format('woff2'),
          url('/assets/fonts/Cantarell-BoldOblique-webfont.woff') format('woff'),
          url('/assets/fonts/Cantarell-BoldOblique-webfont.ttf') format('truetype'); 
     font-weight: normal;
