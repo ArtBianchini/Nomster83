@@ -1,12 +1,8 @@
+
 <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1>
-    <i><%= place.address %></i><br />
-    <p><%= place.description %></p><br />
-
-    <% if place.user.present? %>
+    <i><%= @place.address %></i><br />
+    <p><%= @place.description %></p><br />
       <small><%= place.user.email %></small>
-    <% end %>
-
     <% if place.comments.present? %>
       <div class="col-12">
         <blockquote>
@@ -71,7 +67,6 @@
  Add a comment
 </button>
 </div>
-<% end %> 
 
 <div class="clear"></div>
 <!-- Modal -->
@@ -102,7 +97,11 @@
       <div class="modal-footer"> 
        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f. submit "Add a Picture", class: 'btn btn-danger' %>
+       </div>
         <% end %>
+
+      
+
       
  
    
