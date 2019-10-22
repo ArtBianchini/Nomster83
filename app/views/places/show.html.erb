@@ -1,25 +1,23 @@
-<% @places.each.do |place| %>
 <div class="booyah-box col-10 offset-1">
-<h1><%= @place.name %></h1>
-<i><%= @place.address %></i>
-<br/><br/>
-<p><%= @place.description %></p>
+    <h1><%= link_to place.name, place_path(place) %></h1>
+    <i><%= place.address %></i><br />
+    <p><%= place.description %></p><br />
 
-
-<% if place.comments.present? %>
-<div class="row"> 
-<% @place.comments.each do |comment| %>
-<div class="col-12">
-    <blockquote>
-     <% if comment.humanized_ratings.present? %> -
-      <%= place.comments.humanized_ratings %> -
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
     <% end %>
-      <%= place.comments.last.message %>
-      <small><%= place.comments.last.user.email %></small> 
-    </blockquote>
-  </div> 
-</div>
-<% end %> 
+
+    <% if place.comments.present? %>
+      <div class="col-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %>
+          <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+    <% end %>
 
 <style>
     #map {
@@ -104,9 +102,8 @@
       <div class="modal-footer"> 
        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f. submit "Add a Picture", class: 'btn btn-danger' %>
-         </div>
         <% end %>
-        
+      
  
    
    
