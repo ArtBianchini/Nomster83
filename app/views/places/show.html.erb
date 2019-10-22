@@ -3,7 +3,8 @@
     <i><%= @place.address %></i><br />
     <p><%= @place.description %></p><br />
       <small><%= place.user.email %></small>
-    <% if place.comments.present? %>
+    <div class="row col-10 offset-1">
+        <% @place.comments.each do |comment| %>
       <div class="col-12">
         <blockquote>
           <% if place.comments.last.humanized_rating.present? %>
