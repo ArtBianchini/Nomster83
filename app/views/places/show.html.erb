@@ -92,7 +92,7 @@
      <div class="modal-body">
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %> 
       <%= f.input :picture %>
-      <%= f.input :Caption, as: :select, collection: Comment::Caption %>
+      <%= f.input :caption %>
       </div>
       <div class="modal-footer"> 
        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
